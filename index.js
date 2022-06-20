@@ -1,27 +1,51 @@
-// Write your solution in this file!
-const employee= {
-    name:'Karen',
-    streetAddress: 'webuye',
 
-};
-  
-function destructivelyUpdateEmployeeWithKeyAndValue (employee,key,value){
-    let newEmployee= {... employee};
-    newEmployee [key]=value;
-    return newEmployee;
+const employee = {
+    const driver = {
+      name: "Malin",
+      streetAddress: "7 Main Street"
+    
+    }
 }
-function destructivelyUpdateEmployeeWithKeyAndValue( employee,key,value){
-    employee [key]= value;
-    return employee;
+    
+    function updateEmployeeWithKeyAndValue(employee, key, value) {
+    function updateDriverWithKeyAndValue(driver, key, value) {
+      // Alternate using ES6 Spread operators:
+      // return { ...employee, ...{ [key]: value } }
+      return Object.assign({}, employee, { [key]: value });
+      // return { ...driver, ...{ [key]: value } }
+      return Object.assign({}, driver, { [key]: value });
+    }
 }
-
-function destructivelyDeleteFromEmployeeByKey(employee,key){
-    let newEmployee={...employee};
-    delete newEmployee [key];
-    return newEmployee;
+    
+    function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+      employee[key] = value;
+    function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
+      driver[key] = value;
+    
+      return employee;
+      return driver;
+    }
 }
-function destructivelyDeleteFromEmployeeByKey (employee,key){
-    delete employee [key]
-    return employee
-
+    
+    function deleteFromEmployeeByKey(employee, key) {
+    function deleteFromDriverByKey(driver, key) {
+    
+      const newObj= Object.assign({}, employee);
+    
+    const newObj= Object.assign({}, driver);
+    
+      delete newObj[key];
+    
+      return newObj;
+    }
+    }
+    
+    function destructivelyDeleteFromEmployeeByKey(employee, key) {
+      delete employee[key];
+    function destructivelyDeleteFromDriverByKey(driver, key) {
+      delete driver[key];
+    
+      return employee;
+      return driver;
+    }
 }
